@@ -5,10 +5,13 @@ spring:
     name: "baseProject"
   devtools:
     add-properties: false
+  sql:
+    init:
+      mode: always
   h2:
     console:
       enabled: true
-      path: "/h2"
+      path: "/h2-console"
   profiles:
     include: null
 management:
@@ -27,12 +30,12 @@ cors:
   allowed-origins: "http://localhost:4200,http://localhost:8080"
 mysql:
   datasource:
-    db: "productdb"
-    host-and-port: "localhost:3306"
-    username: "root"
-    password: "root1234"
-    driver: "pool"
-    protocol: "mysql"
+    db: "transactionsdb"
+    host-and-port: "h2:mem"
+    username: "sa"
+    password: ""
+    driver: "h2"
+    protocol: "mem"
     connection-pool:
       acquire-retry: 3
       min-idle: 10

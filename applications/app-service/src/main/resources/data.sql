@@ -1,0 +1,10 @@
+INSERT INTO transactions (amount, commission, date_created) VALUES (12000.00, 600.00, CURRENT_TIMESTAMP());
+INSERT INTO transactions (amount, commission, date_created) VALUES (15000.00, 750.00, CURRENT_TIMESTAMP());
+INSERT INTO transactions (amount, commission, date_created) VALUES (20000.00, 1000.00, CURRENT_TIMESTAMP());
+INSERT INTO transactions (amount, commission, date_created) VALUES (11000.00, 550.00, CURRENT_TIMESTAMP());
+INSERT INTO transactions (amount, commission, date_created) VALUES (13000.00, 650.00, CURRENT_TIMESTAMP());
+INSERT INTO transactions (amount, commission, date_created) VALUES (8000.00, 160.00, CURRENT_TIMESTAMP());
+INSERT INTO transactions (amount, commission, date_created) VALUES (5000.00, 100.00, CURRENT_TIMESTAMP());
+INSERT INTO transactions (amount, commission, date_created) VALUES (9000.00, 180.00, CURRENT_TIMESTAMP());
+INSERT INTO transactions (amount, commission, date_created) VALUES (7000.00, 140.00, CURRENT_TIMESTAMP());
+INSERT INTO transactions (amount, commission, date_created) VALUES (10000.00, 200.00, CURRENT_TIMESTAMP());

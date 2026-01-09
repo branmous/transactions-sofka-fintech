@@ -7,14 +7,14 @@ This project is a reactive API for managing financial transactions, built with J
 ![Java](https://img.shields.io/badge/Java-17-blue)
 ![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3-green)
 ![Project Reactor](https://img.shields.io/badge/Project%20Reactor-reactive-blueviolet)
-![MySQL](https://img.shields.io/badge/MySQL-R2DBC-orange)
+![H2 Database](https://img.shields.io/badge/h2-R2DBC-orange)
 ![Gradle](https://img.shields.io/badge/Gradle-8.4-lightgrey)
 ![JUnit 5](https://img.shields.io/badge/JUnit-5-green)
 
 - **Language:** Java 17
 - **Framework:** Spring Boot 3 (WebFlux)
 - **Asynchronous Programming:** Project Reactor
-- **Database:** MySQL with R2DBC
+- **Database:** H2 with R2DBC
 - **Build Tool:** Gradle
 - **Testing:** JUnit 5
 
@@ -55,7 +55,6 @@ The project follows the Clean Architecture principles, promoting a separation of
 ## Prerequisites
 
 - JDK 17
-- Docker (for running a local MySQL database)
 
 ## Setup and Execution
 
@@ -64,10 +63,7 @@ The project follows the Clean Architecture principles, promoting a separation of
     git clone <repository-url>
     ```
 2.  **Configure the database:**
-    - The application is configured to connect to a MySQL database. You can use the following Docker command to start a local instance:
-      ```bash
-      docker run --name mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=password -e MYSQL_DATABASE=transactions -d mysql:8.0
-      ```
+    - The application is configured to connect to a H2 database.
     - The database connection properties can be found and modified in `applications/app-service/src/main/resources/application.yaml`.
 
 3.  **Build the project:**
