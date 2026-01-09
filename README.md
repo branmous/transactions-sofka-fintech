@@ -1,8 +1,8 @@
-# Transaction Service
+# Servicio de Transacciones
 
-This project is a reactive API for managing financial transactions, built with Java 17, Spring Boot 3, and following Clean Architecture principles.
+Este proyecto es una API reactiva para la gestión de transacciones financieras, construida con Java 17, Spring Boot 3, y siguiendo los principios de Arquitectura Limpia.
 
-## Tech Stack
+## Pila Tecnológica
 
 ![Java](https://img.shields.io/badge/Java-17-blue)
 ![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3-green)
@@ -11,16 +11,16 @@ This project is a reactive API for managing financial transactions, built with J
 ![Gradle](https://img.shields.io/badge/Gradle-8.4-lightgrey)
 ![JUnit 5](https://img.shields.io/badge/JUnit-5-green)
 
-- **Language:** Java 17
+- **Lenguaje:** Java 17
 - **Framework:** Spring Boot 3 (WebFlux)
-- **Asynchronous Programming:** Project Reactor
-- **Database:** H2 with R2DBC
-- **Build Tool:** Gradle
-- **Testing:** JUnit 5
+- **Programación Asíncrona:** Project Reactor
+- **Base de Datos:** H2 con R2DBC
+- **Herramienta de Construcción:** Gradle
+- **Pruebas:** JUnit 5
 
-## Project Structure
+## Estructura del Proyecto
 
-The project follows the Clean Architecture principles, promoting a separation of concerns and creating a more maintainable and scalable application.
+El proyecto sigue los principios de Arquitectura Limpia, promoviendo una separación de responsabilidades y creando una aplicación más mantenible y escalable.
 
 ```
 .
@@ -37,47 +37,47 @@ The project follows the Clean Architecture principles, promoting a separation of
         └── reactive-web
 ```
 
-- **`domain`**: Contains the business logic of the application.
-  - **`model`**: Represents the business entities.
-  - **`usecase`**: Implements the business rules and orchestrates the flow of data.
-- **`infrastructure`**: Contains the external dependencies and implementations of the interfaces defined in the domain.
-  - **`driven-adapters`**: Implements the outbound communication with external systems, such as databases or other APIs.
-  - **`entry-points`**: Contains the inbound communication with the application, such as REST controllers.
-- **`applications`**: Contains the main application class and the configuration of the application.
+- **`domain`**: Contiene la lógica de negocio de la aplicación.
+  - **`model`**: Representa las entidades de negocio.
+  - **`usecase`**: Implementa las reglas de negocio y orquesta el flujo de datos.
+- **`infrastructure`**: Contiene las dependencias externas e implementaciones de las interfaces definidas en el dominio.
+  - **`driven-adapters`**: Implementa la comunicación saliente con sistemas externos, como bases de datos u otras APIs.
+  - **`entry-points`**: Contiene la comunicación entrante con la aplicación, como controladores REST.
+- **`applications`**: Contiene la clase principal de la aplicación y la configuración de la misma.
 
-## API Reference
+## Referencia de la API
 
-| Method | Endpoint                  | Description                | Payload Example                          |
-|--------|---------------------------|----------------------------|------------------------------------------|
-| `POST` | `/api/v1/transactions`    | Creates a new transaction. | `{"amount": 100.50}`                     |
-| `GET`  | `/api/v1/transactions`    | Retrieves all transactions.| N/A                                      |
+| Método | Endpoint                  | Descripción                      | Ejemplo de Payload               |
+|--------|---------------------------|----------------------------------|------------------------------------|
+| `POST` | `/api/v1/transactions`    | Crea una nueva transacción.      | `{"amount": 100.50}`               |
+| `GET`  | `/api/v1/transactions`    | Recupera todas las transacciones.| N/A                                |
 
-## Prerequisites
+## Requisitos Previos
 
 - JDK 17
 
-## Setup and Execution
+## Configuración y Ejecución
 
-1.  **Clone the repository:**
+1.  **Clonar el repositorio:**
     ```bash
     git clone <repository-url>
     ```
-2.  **Configure the database:**
-    - The application is configured to connect to a H2 database.
-    - The database connection properties can be found and modified in `applications/app-service/src/main/resources/application.yaml`.
+2.  **Configurar la base de datos:**
+    - La aplicación está configurada para conectarse a una base de datos H2.
+    - Las propiedades de conexión de la base de datos se pueden encontrar y modificar en `applications/app-service/src/main/resources/application.yaml`.
 
-3.  **Build the project:**
+3.  **Construir el proyecto:**
     ```bash
     ./gradlew build
     ```
-4.  **Run the application:**
+4.  **Ejecutar la aplicación:**
     ```bash
     ./gradlew bootRun
     ```
 
-## Testing
+## Pruebas
 
-To run the unit tests, execute the following command:
+Para ejecutar las pruebas unitarias, ejecute el siguiente comando:
 
 ```bash
 ./gradlew test
