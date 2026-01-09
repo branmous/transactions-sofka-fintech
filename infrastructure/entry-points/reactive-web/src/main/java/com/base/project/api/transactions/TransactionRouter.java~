@@ -15,6 +15,6 @@ public class TransactionRouter {
     @Bean
     public RouterFunction<ServerResponse> transactionRoutes(TransactionHandler handler) {
         return route(POST("/api/v1/transactions"), handler::createTransaction)
-                .andRoute(GET("/api/v1/transactions"), handler::getAll);
+                .andRoute(GET("/api/categories"), handler::getAll);
     }
 }
