@@ -31,7 +31,7 @@ public class CreateTransactionUseCase {
 
         return Mono.just(transaction.toBuilder()
                 .commission(commission)
-                .date(LocalDateTime.now())
+                .dateCreated(LocalDateTime.now())
                 .build());
     }
 }

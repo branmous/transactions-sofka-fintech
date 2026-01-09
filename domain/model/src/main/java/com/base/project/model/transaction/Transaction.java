@@ -16,5 +16,5 @@ public class Transaction {
     private Long id;
     private BigDecimal amount;
     private BigDecimal commission;
-    private LocalDateTime date;
+    private LocalDateTime dateCreated;
 }
